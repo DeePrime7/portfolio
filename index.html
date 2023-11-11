@@ -1,83 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Otene Daniel - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="D.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dehrealties - Real Estate Company</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+  <style>
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: purple;
+color:black;
+font-size: 2vw;
+font-weight: lighter;
+margin: 0;
+padding: 0;
+text-align: center;
+}
+.contact-pop-up{
+    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(green-icon-2.jpg); */
+    background-color: white;
+    width: 50vw;
+    height: 10vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding:5px;
+    align-items: center;
+}
+nav a{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+    margin-right: 5%;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+nav a:hover, nav a:active{
+    color: purple;
+    transition: 1s;
+}
+nav img{
+    width: 10vw;
+    border-radius: 50%;
+    margin: 10px;
+}
+.welcome{
+    margin:0px 100px;
+}
+.welcome h1 , .welcome p{
+    height: fit-content;
+}
+.wcu{
+    position:fixed;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+}
+.wcu img{
+    width: 10vw;
+}
+header {
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(green-icon-2.jpg);
+background-position: center;
+background-size: cover;
+width: 100%;
+text-align: center;
+border-radius: 0px 0px 50px 0px;
+padding: 0px 0px 10vh 0px;
+}
+header h1{
+    margin: 0;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(196, 0, 196);
+    text-shadow: 4px 0px 2px rgba(255, 255, 255, 0.863);
+}
+header p{
+    font-size: 25px;
+    color: white;
+}
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.container1{
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 95%;
+background: white;
+margin-top: 10vh;
+}
+.container2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    margin: 10vh 0px 10vh 0px;
+}
+.container2 ul{
+    list-style-type: circle;
+}
+.container1 img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 5%;
+}
+.content h2, .content h2 a{
+    font-size: 3vw;
+    color: rgb(199, 0, 199);
+    text-shadow: 0px 2px 3px black;
+    text-decoration: none;
+}
+.imgselection{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10vh;
+    flex-direction:row;
+}
+.isc{
+    width: fit-content;
+}
+.imgselection img{
+    display: inline-block;
+    width: 20vw;
+}
+
+.isc:hover{
+    background-color: black;
+    color: white;
+}
+footer {
+text-align: center;
+background-color:rgb(31, 0, 30);
+color: grey;
+width: 100%;
+background-size: contain;
+}
+footer ul{
+list-style: none;
+}
+footer ul li  a{
+text-decoration: none;
+color: grey;
+font-weight: 300;
+}
+footer ul li  a:hover, footer ul li  a:active{
+    color: white;
+    transition: 1s;
+}
+footer li{
+    margin: 10px;
+}
+.stickyicon-list i{
+    color: white;
+    font-size: 50px;
+    margin: 10px;
+}
+.stickyicon-list i:hover{
+    color: rgb(255, 0, 255);
+    transition: 1s;
+}
+
+@media only screen and (max-width: 530px) {
+.imgselection{
+    justify-content: space-around;
+    flex-direction:column;
+    margin-top: 50px;
+}
+.isc{
+    display: block;
+    flex-direction: column;
+    background-color: purple;
+    width: 80%;
+    padding: 15% 20px;
+    margin:auto auto 50px auto;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.imgselection img{
+    display: inline-block;
+    width: 80%;
+}
+.container1{
+    font-size: 20px;
+    text-align: center;
+}
+.container1 p{
+    margin: 20px;
+}
+.container2{
+    font-size: 20px;
+}
+footer p, li{
+    font-size: 20px;
+}
+header h1{
+    font-size: 40px;
+    color: purple;
+}
+header p{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 5vh;
+}
+.content h2, .content h2 a{
+    font-size: 30px;
+    color: purple;
+    text-shadow: 0px 2px 3px black;
+    text-decoration: none;
+}
+.container2 ul li{
+    line-height: 200%;
+}
+body {
+font-weight: 400;
+}
+}
+
+@media only screen and (min-width: 530px) {
+.imgselection img:hover{
+    width: 30vw;
+    transition: 0.5s ease-in-out;
+}
+}
+  </style>
 </head>
 <body>
-    <nav>
-        <img name="top" src="name logo.png">
-        <ul>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="#skill">SKILLS</a></li>
-        </ul>
-    </nav>
-    <a href="wa.me/2348138758235"><img src="whatsapp.png" id="whatsapp"></a>
-    <header>
-        <div class="mainprofile">
-            <div>
-                <img src="pro 2.jpg">
-            </div>
-            <div class="info">
-                <h2>Otene Daniel</h2>
-                <p>Status: Web Developer | Graphic Designer</p>
-                <pre>
-I am a Web Developer with execllent color sense, and I
-am a Web Developer with execllent color sense, and I 
-am a Web Developer with execllent color sense</pre>
-            </div>
 
-        </div>
-    </header>
-    <table>
-        <th><h2>SKILLS</h2></th>
-        <tr>
-            <td>HTML</td>
-        </tr>
-        <tr>
-            <td><img src="html rank.png"></td>
-        </tr>
-        <tr>
-            <td>CSS</td>
-        </tr>
-        <tr>
-            <td><img src="css rank.png"></td>
-        </tr>
-        <tr>
-            <td>PYTHON</td>
-        </tr>
-        <tr>
-            <td><img src="python rank.png"></td>
-        </tr>
-        <tr>
-            <td>UI / UX</td>
-        </tr>
-        <tr>
-            <td><img src="UI UX rank.png"></td>
-        </tr>
-    </table>
-    <div class="otheractivities">
-        <h1 name="skill">LEISURE ACTIVITIES</h1>
-        <ul>
-            <li>Play Basket Ball</li>
-            <li>Foot Race</li>
-            <li>Read Comics</li>
-            <li>Watch Movies</li>
-        </ul>
+<header>
+  <nav>
+    <img id="logo" src="Real Estate, Home, House Logo.png">
+        <a href="#">Contact Us</a>
+  </nav>
+  <div class="welcome">
+    <h1>Welcome To Dehrealties</h1>
+    <p>Your Trusted Partner in Real Estate</p>
+  </div>
+  
+  <div class="wcu"><a href="#"><img src="whatsapp.png" alt=""></i></a></div>
+</header>
+<div class="contact-pop-up">
+
+</div>
+</div>
+<div class="content">
+  <div class="container1">
+    <h2 ><a name="about">About Us</a> </h2>
+    <p>We are a dedicated real estate company that specializes<br> in helping you find your dream home or investment property.</p>
+    <img src="avatar.png">
+  </div>
+  <div class="container2">
+    <h2><a name="services">Services</a></h2>
+    <ul>
+      <li>Residential Property Sales</li>
+      <li>Commercial Property Sales</li>
+      <li>Property Management</li>
+    </ul>
+    <div class="imgselection">
+      <div class="isc">
+        <img src="mass-housing.jpg">
+        <p>Residential Property <br>Sales</p>
+      </div>
+      <div class="isc">
+        <img src="ASO-Gardens-Estate-Karsana.jpg">
+        <p>Property Management</p>
+      </div>
+      <div class="isc">
+        <img src="green-icon-10.jpg">
+        <p>Commercial Property <br/>Sales</p>
+      </div>
     </div>
+</div>
+<footer>
+<div class="stickyicon-list">  
+  <a href="#facebook" class="facebook">   
+  <i class="fa fa-facebook"></i>   
+  </a>   
+  <a href="#twitter" class="twitter">   
+  <i class="fa fa-twitter"></i>   
+  </a>        
+  <a href="#instagram" class="instagram">   
+  <i class="fa fa-instagram"></i>   
+  </a>                              
+  <a href="#youtube" class="youtube">   
+  <i class="fa fa-youtube"></i>   
+  </a>
+</div>  
+<ul>
+  <li><a href="#">Contact Us</a></li>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#about">About US</a></li>
+  <li><a href="#">Back To Top</a></li>
+</ul>
+  <p>&copy; 2023 dehrealties. All rights reserved.</p>
+</footer>
 
-
-
-
-
-
-
-
-    <a href="#top"><button id="backtotop">Back To Top ^ ^</button></a>
 </body>
 </html>
-
